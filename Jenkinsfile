@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('깃 업데이트') {
       steps {
-        git url: 'https://github.com/lin-chae/kakaodevpipeline.git', branch: 'main'
+        git url: 'https://github.com/lin-chae/kakeodevpipeline.git', branch: 'main'
       }
     }
 
