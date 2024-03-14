@@ -19,8 +19,8 @@ pipeline {
     stage('쿠버네티스 디플로리 서비스') {
       steps {
         sh '''
-        ssh 211.183.3.100 'sudo kubectl create deploy deploy-yellow --image=chaechae121/kakaodev:yellow'
-        ssh 211.183.3.100 'sudo kubectl expose deploy deploy-yellow --type=NodePort --port=8011 --target-port=80 --name=deploy-yellow-np'
+        ssh 211.183.3.100 'kubectl create deploy deploy-yellow --image=chaechae121/kakaodev:yellow'
+        ssh 211.183.3.100 'kubectl expose deploy deploy-yellow --type=NodePort --port=8004 --target-port=80 --name=deploy-yellow-np'
         '''
       }
     }
